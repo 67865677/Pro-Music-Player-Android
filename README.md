@@ -31,4 +31,5 @@ Download APK for testing: [APK file in repo]
 - Firebase Firestore
 - Material Design UI
 
-Developed for 6 months. Ready for reskin! Contact: seytiyew2002@gmail.com
+
+Developed for 6 months. Ready for reskin! 
