@@ -1,2 +1,34 @@
-# Pro-Music-Player-Android
-Full source code for Pro Music Player Android app with Firebase integration. 6 months development
+Pro Music Player - Premium Android App
+
+Full source code available on CodeCanyon ($39).
+
+ Demo APK
+Download APK for testing: [APK file in repo]
+
+ Screenshots
+![Main Screen](screenshots/main.jpg)
+![Online Fragment](screenshots/online.jpg)
+![Playlists](screenshots/playlists.jpg)
+![Player](screenshots/player.jpg)
+![Settings](screenshots/settings.jpg)
+
+ Features
+- Offline music scanning (MP3, WAV, FLAC)
+- Online streaming from Firestore ("songs" collection)
+- Playlists: Recent, Most Played, Favorites
+- Background play, lockscreen controls
+- Notifications, 60 FPS, zero crashes
+
+ Setup
+1. Open in Android Studio
+2. Replace google-services.json with your Firebase project
+3. Firestore collection: "songs" with fields: title, artist, url
+4. Run on device
+
+ Tech Stack
+- Java (Android Studio)
+- ExoPlayer for streaming
+- Firebase Firestore
+- Material Design UI
+
+Developed for 6 months. Ready for reskin! Contact: seytiyew2002@gmail.com
