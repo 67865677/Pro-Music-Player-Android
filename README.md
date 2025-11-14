@@ -1,6 +1,6 @@
 Pro Music Player - Premium Android App
 
-Full source code available on CodeCanyon ($39).
+Full source code available on CodeCanyon ($29).
 
  Demo APK
 Download APK for testing: [APK file in repo]
@@ -33,3 +33,4 @@ Download APK for testing: [APK file in repo]
 
 
 Developed for 6 months. Ready for reskin! 
+
