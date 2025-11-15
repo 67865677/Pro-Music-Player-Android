@@ -1,128 +1,47 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Чат поддержки</title>
-  <style>
-    #chat {
-      width: 300px;
-      margin: 20px;
-      font-family: Arial, sans-serif;
-    }
-    #messages {
-      border: 1px solid #ccc;
-      height: 200px;
-      overflow-y: scroll;
-      padding: 10px;
-      margin-bottom: 10px;
-      background-color: #f9f9f9;
-    }
-    #messages div {
-      margin-bottom: 5px;
-    }
-    #messageInput {
-      width: 200px;
-      padding: 5px;
-      margin-right: 5px;
-    }
-    #sendButton {
-      padding: 5px 10px;
-    }
-  </style>
-  <link rel="icon" href="data:,">
+    <title>Pro Music Player Demo</title>
+    <style>
+        body { 
+            font-family: Arial; 
+            background: #1a1a1a; 
+            color: white; 
+            text-align: center; 
+            padding: 20px;
+        }
+        .screenshot { 
+            width: 250px; 
+            margin: 10px; 
+            border-radius: 10px; 
+        }
+        .download-btn {
+            display: block; 
+            background: #007bff; 
+            color: white; 
+            padding: 15px 30px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            margin: 20px auto;
+            width: 200px;
+        }
+    </style>
 </head>
 <body>
-  <div id="chat">
-    <div id="messages"></div>
-    <input type="text" id="messageInput" placeholder="Введите сообщение...">
-    <button id="sendButton">Отправить</button>
-  </div>
-  <script>
+    <h1>🎵 Pro Music Player</h1>
+    <p>Premium Android Music Player - Full Source Code</p>
     
-    const socket = new WebSocket('ws://localhost:8081');
-    let userRole = null; 
-    let lastMessageText = ''; 
-
+    <div>
+        <img src="images/screen1.jpg" class="screenshot" alt="Main Screen">
+        <img src="images/screen2.jpg" class="screenshot" alt="Player">
+        <img src="images/screen3.jpg" class="screenshot" alt="Playlists">
+    </div>
     
-    socket.onopen = () => {
-      console.log('Подключено к серверу');
-    };
-
+    <h3>🚀 Features:</h3>
+    <p>Firebase • Offline/Online • Background Play • Java</p>
     
-    socket.onmessage = event => {
-      console.log('Получено сообщение от сервера:', event.data);
-      const messages = document.getElementById('messages');
-      if (!messages) {
-        console.error('Ошибка: Элемент messages не найден!');
-        return;
-      }
-      let messageText;
-      try {
-        const data = JSON.parse(event.data);
-        console.log('Распарсенные данные:', data); 
-        const message = document.createElement('div');
-        if (data.type === 'role') {
-          userRole = data.role;
-          messageText = data.message;
-        } else if (data.type === 'notification') {
-          messageText = data.message;
-        } else if (data.type === 'message') {
-          if (data.sender === 'self') {
-            messageText = `Вы: ${data.message}`;
-          } else if (data.sender === 'support') {
-            messageText = `Поддержка: ${data.message}`;
-          } else if (data.sender === 'customer') {
-            messageText = `Клиент: ${data.message}`;
-          }
-        }
-        
-        if (messageText === lastMessageText) {
-          console.log('Дубликат сообщения, пропускаем:', messageText);
-          return;
-        }
-        lastMessageText = messageText;
-        message.textContent = messageText;
-        messages.appendChild(message);
-        messages.scrollTop = messages.scrollHeight;
-        console.log('Сообщение добавлено в DOM:', messageText);
-      } catch (error) {
-        console.error('Ошибка парсинга JSON:', error);
-      }
-    };
-
+    <a href="https://drive.google.com/uc?export=download&id=1i_TPdXMFyROuVdXU5bOLPrT1BxCSvwSO" class="download-btn">📥 Download Demo APK</a>
     
-    socket.onclose = () => {
-      console.log('Отключено от сервера');
-      const messages = document.getElementById('messages');
-      const message = document.createElement('div');
-      message.textContent = 'Соединение с сервером закрыто.';
-      messages.appendChild(message);
-    };
-
-    
-    socket.onerror = error => {
-      console.error('Ошибка WebSocket:', error);
-    };
-
-    
-    document.getElementById('sendButton').onclick = () => {
-      const input = document.getElementById('messageInput');
-      if (input.value.trim()) {
-        socket.send(input.value);
-        console.log('Отправлено сообщение:', input.value);
-        input.value = ''; // Очистка поля ввода
-      }
-    };
-
-    
-    document.getElementById('messageInput').onkeypress = event => {
-      if (event.key === 'Enter' && event.target.value.trim()) {
-        socket.send(event.target.value);
-        console.log('Отправлено сообщение (Enter):', event.target.value);
-        event.target.value = ''; // Очистка поля ввода
-      }
-    };
-  </script>
+    <p>📧 Support: seytiyew2002@gmail.com</p>
 </body>
 </html>
