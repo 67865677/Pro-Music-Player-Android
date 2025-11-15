@@ -5,13 +5,6 @@ Full source code available on CodeCanyon
  Demo APK
 Download APK for testing: [APK file in repo]
 
- Screenshots
-![Main Screen](screenshots/main.jpg)
-![Online Fragment](screenshots/online.jpg)
-![Playlists](screenshots/playlists.jpg)
-![Player](screenshots/player.jpg)
-![Settings](screenshots/settings.jpg)
-
  Features
 - Offline music scanning (MP3, WAV, FLAC)
 - Online streaming from Firestore ("songs" collection)
@@ -33,5 +26,6 @@ Download APK for testing: [APK file in repo]
 
 
 Developed for 6 months. Ready for reskin! 
+
 
 
