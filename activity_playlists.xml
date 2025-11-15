@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_mini_player">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/gradient_mini_player"
+        app:navigationIcon="@drawable/ic_close"
+        app:title="@string/playlists_title"
+        app:titleTextColor="@android:color/white" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="301dp"
+        android:layout_marginTop="16dp"
+        android:columnCount="2"
+        android:padding="8dp"
+        android:rowCount="2">
+
+        <!-- RECENTLY ADDED -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/recently_added_card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:tag="recently_added_card"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="113dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="29dp"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon1"
+                    android:contentDescription="@string/icon_recently_added"
+                    android:importantForAccessibility="yes" />
+
+                <TextView
+                    android:id="@+id/recently_added_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/recently_added"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/recently_added_tracks_text"
+                    android:layout_width="116dp"
+                    android:layout_height="19dp"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- RECENTLY PLAYED -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/recently_played_card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:tag="recently_played_card"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="113dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="29dp"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon2"
+                    android:contentDescription="@string/icon_recently_played"
+                    android:importantForAccessibility="yes" />
+
+                <TextView
+                    android:id="@+id/recently_played_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/recently_played"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/recently_played_tracks_text"
+                    android:layout_width="116dp"
+                    android:layout_height="19dp"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- FREQUENTLY PLAYED -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/frequently_played_card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:tag="frequently_played_card"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="113dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="29dp"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon3"
+                    android:contentDescription="@string/icon_frequently_played"
+                    android:importantForAccessibility="yes" />
+
+                <TextView
+                    android:id="@+id/frequently_played_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/frequently_played"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/frequently_played_tracks_text"
+                    android:layout_width="116dp"
+                    android:layout_height="19dp"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- FAVORITES -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/favorites_card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:tag="favorites_card"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="113dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="29dp"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon4"
+                    android:contentDescription="@string/icon_favorites"
+                    android:importantForAccessibility="yes" />
+
+                <TextView
+                    android:id="@+id/favorites_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="4dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="@string/favorites"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/favorites_tracks_text"
+                    android:layout_width="116dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+</LinearLayout>

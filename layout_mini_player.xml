@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mini_player"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:orientation="horizontal"
+    android:background="@drawable/gradient_mini_player"
+    android:padding="8dp"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/mini_player_album_art"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/player"
+        android:contentDescription="@string/mini_player_album_art_desc" />
+
+    <TextView
+        android:id="@+id/mini_player_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/no_song_title" />
+
+    <!-- PLAY/PAUSE BUTTON -->
+    <ImageButton
+        android:id="@+id/mini_player_play_pause"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="8dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_play_arrow"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/mini_player_play_pause_desc" />
+
+    <!-- NEXT BUTTON -->
+    <ImageButton
+        android:id="@+id/mini_player_next"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="8dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_skip_next"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/mini_player_next_desc" />
+
+</LinearLayout>
